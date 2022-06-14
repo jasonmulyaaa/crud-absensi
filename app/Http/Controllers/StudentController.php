@@ -86,7 +86,7 @@ class StudentController extends Controller
             'rayon' => 'required',
             'ket' => 'required'
         ]);
-        student::create($request->all());
+        $student->update($request->all());
         return redirect()->route('students.index') ->with('success','Berhasil Update!');
     }
 
